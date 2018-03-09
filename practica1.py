@@ -130,6 +130,17 @@ En caso afirmativo calcularlo. (Si es verdadero = 1. Si es falso = -1).
 También puede darse una respuesta = 0, que se da cuando r^2 = 0.
 
 2 en Z7
+
+Una función que nos responda a la primera pregunta  "Simbolo de legendre" = (a/p)
+(1/p) = 1
+(a^2/p) = 1 (el propio a = a^2)
+(a*b/p) = (a/p) * (b/p)
+(2/p) = 1 si p=1 7 mod 8 o -1 si p = 3 5 mod 8
+
+si n es impar (a/n) = "Simnbolo de Jacubi"
+
+Si m y n son impares (m/n) = (-1)^(((m-1)*(n-1))/4) * (n/m)
+(m/n) = (m%n/n)
 """
 
 
