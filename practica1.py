@@ -89,6 +89,39 @@ Problema dado el número 7, 11 y 19
 Existe un número X tal que 7^X = 11 mod 19
 """
 
+import time
+import random
+from random import randrange
+
+def Modulo(a,b,m):
+    
+    sol=1
+    while b > 0:
+        if b%2 == 1:
+            sol = (sol * a) % m
+        a= (a*a) % m
+        b=b//2
+        
+        
+    return sol
+
+
+
+def Miller_Rabin(p, n):
+
+    for i in range(n):
+        a = randrange(3, p - 1)
+        if Modulo(a,p-1,p) != 1:
+            return False
+    
+    return True
+
+if Miller_Rabin(36,10):
+    print("Candidato a primo")
+else:
+    print("No primo")
+
+        
 # Optativa 1.
 """
 Logaritmo discreto:
