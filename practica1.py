@@ -90,7 +90,6 @@ Existe un número X tal que 7^X = 11 mod 19
 """
 
 import time
-import random
 from random import randrange
 
 def Modulo(a,b,m):
@@ -106,8 +105,7 @@ def Modulo(a,b,m):
     return sol
 
 
-
-def Miller_Rabin(p, n):
+def Miller_Rabin1(p, n):
 
     for i in range(n):
         a = randrange(3, p - 1)
@@ -116,7 +114,7 @@ def Miller_Rabin(p, n):
     
     return True
 
-if Miller_Rabin(36,10):
+if Miller_Rabin1(36,10):
     print("Candidato a primo")
 else:
     print("No primo")
