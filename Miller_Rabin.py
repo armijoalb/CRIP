@@ -47,15 +47,17 @@ def Miller_Rabin2(p, n):
     
     S = p-1
     u = 0
+    #Calculamos p-1 = 2^u*S
     while (S % 2) == 0:
         u = u + 1
         S = S // 2
 
     primo = False
-    
+    #Recorremos todos los elementos de la lista
     for i in range(len(n)):
         a = n[i]
         primo = False
+        #Calculamos si se cumple a == 1 o a == p-1 para cada u
         for j in range(u):
             a = Modulo(a,2,p)
             if primo == False:
