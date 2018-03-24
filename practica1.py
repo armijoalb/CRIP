@@ -138,7 +138,6 @@ def Miller_Rabin2(p, n):
             a = Modulo(a,2,p)
             if primo == False:
                 mod = Modulo(a,S,p)
-                print(a)
                 if mod == 1 :
                     return False
                 elif mod == p-1 :
@@ -148,7 +147,7 @@ def Miller_Rabin2(p, n):
     
     return True
 
-if Miller_Rabin2(561,[95]):
+if Miller_Rabin2(37,[14,20]):
     print("Candidato a primo")
 else:
     print("No primo")
