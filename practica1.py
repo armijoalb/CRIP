@@ -88,7 +88,7 @@ No olvidarse que todas las operaciones tienen el modulo p
 Problema dado el número 7, 11 y 19
 Existe un número X tal que 7^X = 11 mod 19
 """
-
+    
 import time
 from random import randrange
 
@@ -114,12 +114,47 @@ def Miller_Rabin1(p, n):
     
     return True
 
-if Miller_Rabin1(36,10):
+
+
+if Miller_Rabin1(37,10):
     print("Candidato a primo")
 else:
     print("No primo")
 
-        
+def Miller_Rabin2(p, n):
+    
+    S = p-1
+    u = 0
+    while (S % 2) == 0:
+        u = u + 1
+        S = S // 2
+
+    primo = False
+    
+    for i in range(len(n)):
+        a = n[i]
+        primo = False
+        for j in range(u):
+            a = Modulo(a,2,p)
+            if primo == False:
+                mod = Modulo(a,S,p)
+                print(a)
+                if mod == 1 :
+                    return False
+                elif mod == p-1 :
+                    primo = True
+        if primo == False:
+            return False
+    
+    return True
+
+if Miller_Rabin2(561,[95]):
+    print("Candidato a primo")
+else:
+    print("No primo")
+    
+
+
 # Optativa 1.
 """
 Logaritmo discreto:
