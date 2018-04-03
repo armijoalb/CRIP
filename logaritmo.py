@@ -14,6 +14,7 @@ Pasos del algortimo:
     4.2.- Si no está vacía: calculamos los índices de la listas.
 5.- Calculamos x como: x = is-j. Siendo i=indice(n,lista_punto_2), j=indice(n,lista_punto_3).
 """
+from Miller_Rabin import Miller_Rabin1
 
 # Función para calcular el módulo de forma eficiente.
 def exp_mod(a,b,p):
@@ -44,6 +45,8 @@ def algoritmo_discreto(a,b,p):
         return False
     
     # Comprobación de que p es un número primo.
+    if !Miller_Rabin1(p,10):
+        return False
 
     # Calculamos techo.
     s = techo(p)
