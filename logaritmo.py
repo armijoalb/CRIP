@@ -45,7 +45,7 @@ def algoritmo_discreto(a,b,p):
         return False
     
     # Comprobación de que p es un número primo.
-    if !Miller_Rabin1(p,10):
+    if not Miller_Rabin1(p,10):
         return False
 
     # Calculamos techo.
@@ -74,7 +74,27 @@ def algoritmo_discreto(a,b,p):
 
 
 # Algunos ejemplos.
-print(algoritmo_discreto(5,13,37))
-print(algoritmo_discreto(0,13,37))
-print(algoritmo_discreto(3,4,19))
-print(algoritmo_discreto(7,11,19))
+#print(algoritmo_discreto(5,13,37))
+#print(algoritmo_discreto(0,13,37))
+#print(algoritmo_discreto(3,4,19))
+#print(algoritmo_discreto(7,11,19))
+
+
+import time
+
+#print("----------------------------------------")
+#print("Soluciones Práctica:")
+#print("----------------------------------------")
+
+# Función medir los tiempos de ejecución.
+def medirTiempos(a,b,p):
+    init_time = time.time()
+    algoritmo_discreto(a,b,p)
+    finish_time = time.time()
+    elapsed_time = finish_time-init_time
+    
+    return elapsed_time 
+
+
+#print(medirTiempos(6,50628,57347))
+

@@ -14,6 +14,19 @@ Salida: no es primo/
 Se aplica el teorema a^p-1 = 1 mod p en el cual se cumple la
 funcion de heuler si mcd(a,n) = 1 entonces a^e(n) = 1 mod n
 """
+from random import randrange
+
+def Modulo(a, b, m):
+
+    sol = 1
+    while b > 0:
+        if b % 2 == 1:
+            sol = (sol * a) % m
+        a = (a*a) % m
+        b = b//2
+
+    return sol
+
 
 def Miller_Rabin1(p, n):
 
