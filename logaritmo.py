@@ -87,11 +87,17 @@ import time
 #print("----------------------------------------")
 
 # Función medir los tiempos de ejecución.
-def medirTiempos(a,b,p):
-    init_time = time.time()
-    algoritmo_discreto(a,b,p)
-    finish_time = time.time()
-    elapsed_time = finish_time-init_time
+def medirTiempos(args =  list(),miller_rabin=False):
+    if( not miller_rabin ):
+        init_time = time.time()
+        algoritmo_discreto(args[0],args[1],args[2])
+        finish_time = time.time()
+        elapsed_time = finish_time-init_time
+    else:
+        init_time = time.time()
+        Miller_Rabin1(args[0],args[1])
+        finish_time = time.time()
+        elapsed_time = finish_time-init_time
     
     return elapsed_time 
 

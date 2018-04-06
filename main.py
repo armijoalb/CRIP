@@ -16,6 +16,9 @@ if __name__ == "__main__":
         exit
 
     out_file = open("output.csv",'w')
+    out_file.write("A,B,Primo,Tiempo (seg) \n")
+    tiempos_miller_rabin = open("time_rabin.csv",'w')
+    tiempos_miller_rabin.write("Primo,Tiempo (seg)\n")
     print("Leyendo el archivo de entrada.")
     file_name = sys.argv[1]
     with open(file_name, newline='') as csvfile:
@@ -25,8 +28,11 @@ if __name__ == "__main__":
             b = int(row[1])
             p = int(row[2])
             print("Calculando ejemplo: {0:d},{1:d},{2:d}".format(a,b,p))
-            time = medirTiempos(a,b,p)
+            time = medirTiempos(args=list([a,b,p]))
             out_file.write("{0:d},{1:d},{2:d},{3:f} \n".format(a,b,p,time) )
+            time = medirTiempos(args=list([p,2000]),miller_rabin=True)
+            tiempos_miller_rabin.write("{0:d}, {1: f} \n".format(p,time))
 
 
     out_file.close()
+    tiempos_miller_rabin.close()
