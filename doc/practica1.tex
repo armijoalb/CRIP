@@ -14,10 +14,12 @@
 \usetikzlibrary{babel}
 \usepackage{color}
 \usepackage{hyperref}
+\usepackage{setspace}
 
 \definecolor{dkgreen}{rgb}{0,0.6,0}
 \definecolor{gray}{rgb}{0.5,0.5,0.5}
 \definecolor{mauve}{rgb}{0.58,0,0.82}
+\definecolor{LightCyan}{rgb}{0.88,1,1}
 
 \lstset{frame=tb,
 	language=Java,
@@ -53,7 +55,7 @@
 
 \author{ Juan Alberto Martínez López \\ Alberto Armijo Ruiz \\}
 
-\date{2 de abril de 2018} % Incluye la fecha actual
+\date{\normalsize\today} % Incluye la fecha actual
 
 
 
@@ -85,25 +87,25 @@
 
 Para esta práctica 
 
-
 \section{Evaluación de tiempos}
 
-
-\begin{table}[htbp]
+\begin{table}[h]
 	\begin{center}
-		\begin{tabular}{|l|l|l|l|}
-			A & B & P & Tiempos (s) \\ \hline
-			6 & 50628 & 57347 & 0.001187 \\ \hline 
-			8 & 449605 & 468577 & 0.004052 \\ \hline
-			207 & 4374842 & 5555567 & 0.018117 \\ \hline
-			4007 & 8515459 & 87654337 & 0.080128\\ \hline
-			40756 & 118205788 & 987654323 & 0.289543\\ \hline
-			20544 & 253647140 & 3141592661 & 0.735911\\ \hline
-			112354 & 9048018943 & 11111111113 & 1.506318\\ \hline
-			1245628 & 49579028347 & 121212121223 & 5.264323\\ \hline
-			87569 & 1342094524016 & 2718281828489 & 29.752512\\ \hline
-			568236 & 14717101287551 & 16180339892149 & 76.744032\\ \hline
-			4555786 & 778596955901441 & 800000000000017 & 612.546521\\ \hline
+		\begin{tabular}{|l|l|l|l|l|}
+			\hline 
+			\rowcolor{LightCyan}
+			A & B & P & Solución & Tiempos (s) \\ \hline
+			6 & 50628 & 57347& 7 & 0.001187 \\ \hline 
+			8 & 449605 & 468577& 11 & 0.004052 \\ \hline
+			207 & 4374842 & 5555567& 104 & 0.018117 \\ \hline
+			4007 & 8515459 & 87654337& 430 & 0.080128\\ \hline
+			40756 & 118205788 & 987654323& 10748 & 0.289543\\ \hline
+			20544 & 253647140 & 3141592661& 113 & 0.735911\\ \hline
+			112354 & 9048018943 & 11111111113& 5658 & 1.506318\\ \hline
+			1245628 & 49579028347 & 121212121223& 568985 & 5.264323\\ \hline
+			87569 & 1342094524016 & 2718281828489& 5749833 & 29.752512\\ \hline
+			568236 & 14717101287551 & 16180339892149& 389567512 & 76.744032\\ \hline
+			4555786 & 778596955901441 & 800000000000017& 785951 & 612.546521\\ \hline
 		\end{tabular}
 		\caption{Tabla análisis de logaritmo.}
 		\label{tabla:compleja}
@@ -113,6 +115,8 @@ Para esta práctica
 \begin{table}[htbp]
 	\begin{center}
 		\begin{tabular}{|l|l|}
+			\hline
+			\rowcolor{LightCyan}
 			Longitud clave & Tiempo ejecución (seg) \\ \hline
 			5 & 0.001187 \\ \hline 
 			6 & 0.004052 \\ \hline
