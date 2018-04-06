@@ -121,6 +121,8 @@ Para el algoritmo Miller-Rabin con 2000 aplicaciones podemos apreciar muy poco a
 	\end{center}
 \end{figure}
 
+Como se puede ver en la gráfica y en la tabla, los tiempos de ejecución son pequeños, y sigue una distribución lineal dependiendo del tamaño del número primo. 
+
 Para el algoritmo del logaritmo discreto se han calculado una a y c aleatoria y hemos calculado la b a partir de $b = a^c\mod p$. En las tablas 1.2 y 1.3 si que se puede apreciar un aumento considerable de los tiempos ya que de un tiempo a otro podemos ver como se cuadruplican de un resultado a otro. \\
 
 \begin{table}[htbp]
@@ -197,57 +199,20 @@ El algoritmo además ocupa una gran cantidad de RAM, ya que para la clave de may
 
 \section*{Conclusión}
 
-Este algoritmo no tiene una gran eficiencia a la hora de procesar números grandes ya que si por ejemplo ejecutamos el algoritmo con una clave de 50 cifras tendríamos que $4^(50) = 4.02 e+19$ años, lo que sería demasiado tiempo para descodificar una clave de ese tamaño.\\
+Sobre el algoritmo Miller-Rabin podemos concluir que es un algoritmo eficiente para calcular si un número es primo, aunque debemos tener en cuenta que la solución que nos da no es exacta en caso positivo, es decir cuando puede que sea primo. \\
 
-%\includegraphics[width=1\linewidth]{Capturas VRTK/prueba 43.1}\\
+El algoritmo que resuelve el problema del logaritmo discreto (algoritmo Big step, baby step) no tiene una gran eficiencia a la hora de procesar números grandes ya que si por ejemplo ejecutamos el algoritmo con una clave de 50 cifras tendríamos que $4^(50) = 4.02 e+19$ años, lo que sería demasiado tiempo para descodificar una clave de ese tamaño.\\
 
-%\includegraphics[width=1\linewidth]{Capturas VRTK/prueba 43.2}\\
-
-%\includegraphics[width=1\linewidth]{Capturas VRTK/prueba 43.3}
-
-
-%----------------------------------------------------------------------------------------
-%	REFERENCIAS
-%----------------------------------------------------------------------------------------
-
-%\section{Incluyendo las referencias}
-
-%A lo largo del texto, tendrá que incluir referencias, para ello puede usar las
-%notas a pie de página con \textbackslash footnote \footnote{Este es un ejemplo}
-%o añadiendo citas con \textbackslash cite \cite{mrx05,prueba2}.
-%\LaTeX puede gestionar las referencias mediante BibTex, que genera entradas bbl
-%a partir de un archivo .bib. También puede incluirlas directamente en el documento
-%fuente como entradas dentro de una sección (thebibliography) dentro del mismo
-%documento (son las generadas en el archivo .bbl por BibTex). No obstante,
-%se recomienda el uso del archivo .bib como buena práctica a seguir cuando se
-%trabaje con \LaTeX.
-
-%Para incluir las referencias usaremos la etiqueta \textbackslash bibliography
-%especificando su estilo: \textbackslash bibliographystyle que, en nuestro caso,
-%es plain.
-
-%------------------------------------------------
-%\newpage
-
-%\bibliographystyle{plain} % hay varias formas de citar
-
-%\begin{thebibliography}{99} %Principio Bibliografía (99 max elementos)
-
-	%\bibitem{virtual} Virtualización. (24 de septiembre de 2015):
-	%\url{http://www.vmware.com/latam/virtualization/how-it-works}.
-
-%	\bibitem{proyectivo} \url{http://www.rac.es/ficheros/doc/00894.pdf} 
-%	\bibitem{consP} \url{https://eva.fing.edu.uy/pluginfile.php/63526/mod_resource/content/2/Teorico/clase04_TransformacionesGeo.pdf}
-%	\bibitem{homomorfismo} \url{https://en.wikipedia.org/wiki/Homography#Homographies_of_a_projective_line}
-%	\bibitem{hart} Multiple View Geometry in Computer Vision (Second Edition) \textit{Richard Hartley, Andrew Zisserman}
-%	\bibitem{szel} Computer vision: Algorithms and applications \textit{Richard Szeliski}	
-
-%\end{thebibliography}
-
-
-%\bibliography{citas} %archivo citas.bib que contiene las entradas
-
-
-
+\section*{Instrucciones para su ejecución en Linux}
+Para poder ejecutar el código en Linux es necesario tener instalado antes python3. Si lo tenemos instalado deberemos hacer lo siguiente:\\
+\begin{enumerate}
+	\item Descargar el directorio que contiene el archivo ejecutable. Llamado Practica1\_AA\_JA.zip
+	\item Descomprimir el contenido de la carpeta.
+	\item Acceder a la carpeta que hemos descomprimido. Para ello hay que utilizar el comando cd Practica1 desde el directorio en el que se haya descomprimido.
+	\item Para ejecutar el archivo main.py hay que ejecutar el siguiente comando:
+	\begin{lstlisting}
+		python3 main.py <nombre_del_archivo_de_pruebas>
+	\end{lstlisting}
+\end{enumerate}
 
 \end{document}

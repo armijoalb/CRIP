@@ -1,2 +1,2 @@
-\babel@toc {spanish}{}
+\select@language {spanish}
 \contentsline {section}{\numberline {1}Evaluaci\IeC {\'o}n de tiempos}{3}{section.1}
