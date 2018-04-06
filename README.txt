@@ -4,4 +4,4 @@ Instruciones de instalación y uso
 
 -Hacer cd sobre la carpeta raiz del fichero main.py
 
--Ejecutar el comando pyrhon3 main.py
+-Ejecutar el comando python3 main.py
