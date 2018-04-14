@@ -83,7 +83,7 @@
 %	Introducción
 %----------------------------------------------------------------------------------------
 
-\section*{Introducción}
+\section{Introducción}
 
 Para esta práctica hemos desarrollado el algoritmo Miller-Rabin para decidir si un número es posible primo o no es primo, para ello hemos desarrollado dos versiones del algoritmo: Una en la que se realizan n aplicaciones para comprobar la primalidad y otro con una lista de números naturales con los que se comprueba el test para el primo y cada una de las bases de la lista. Para calcular la primalidad utilizamos el algoritmo de logaritmo discreto en el que comprobamos la existencia dado a,b y p de $\log_a (b) \mod n$ y si se cumple el número es primo.
 
@@ -197,13 +197,13 @@ Hemos calculado la media armónica entre un tiempo y el siguiente es de 3.47 el 
 
 El algoritmo además ocupa una gran cantidad de RAM, ya que para la clave de mayor tamaño ha llegado a ocupar 4.2 Gb.\\
 
-\section*{Conclusión}
+\section{Conclusión}
 
 Sobre el algoritmo Miller-Rabin podemos concluir que es un algoritmo eficiente para calcular si un número es primo, aunque debemos tener en cuenta que la solución que nos da no es exacta en caso positivo, es decir cuando puede que sea primo. \\
 
 El algoritmo que resuelve el problema del logaritmo discreto (algoritmo Big step, baby step) no tiene una gran eficiencia a la hora de procesar números grandes ya que si por ejemplo ejecutamos el algoritmo con una clave de 50 cifras tendríamos que $4^(50) = 4.02 e+19$ años, lo que sería demasiado tiempo para descodificar una clave de ese tamaño.\\
 
-\section*{Instrucciones para su ejecución en Linux}
+\section{Instrucciones para su ejecución en Linux}
 Para poder ejecutar el código en Linux es necesario tener instalado antes python3. Si lo tenemos instalado deberemos hacer lo siguiente:\\
 \begin{enumerate}
 	\item Descargar el directorio que contiene el archivo ejecutable. Llamado Practica1\_AA\_JA.zip

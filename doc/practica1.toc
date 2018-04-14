@@ -1,2 +1,5 @@
-\select@language {spanish}
-\contentsline {section}{\numberline {1}Evaluaci\IeC {\'o}n de tiempos}{3}{section.1}
+\babel@toc {spanish}{}
+\contentsline {section}{\numberline {1}Introducci\IeC {\'o}n}{3}{section.1}
+\contentsline {section}{\numberline {2}Evaluaci\IeC {\'o}n de tiempos}{3}{section.2}
+\contentsline {section}{\numberline {3}Conclusi\IeC {\'o}n}{7}{section.3}
+\contentsline {section}{\numberline {4}Instrucciones para su ejecuci\IeC {\'o}n en Linux}{8}{section.4}
