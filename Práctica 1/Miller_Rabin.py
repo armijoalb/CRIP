@@ -73,7 +73,7 @@ def Miller_Rabin2(p, n):
         #Calculamos si se cumple a == 1 o a == p-1 para cada u
         for j in range(u):
             a = Modulo(a,2,p)
-            if primo == False:
+            if not primo:
                 mod = Modulo(a,S,p)
                 if mod == 1 :
                     return False
