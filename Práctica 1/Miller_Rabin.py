@@ -79,7 +79,7 @@ def Miller_Rabin2(p, n):
                     return False
                 elif mod == p-1 :
                     primo = True
-        if primo == False:
+        if not primo:
             return False
     
     return True
