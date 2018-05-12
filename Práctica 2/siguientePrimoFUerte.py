@@ -52,11 +52,13 @@ def PrimalidadMillerRabin(p,lista):
             if(not probFound):#Si sale del bucle(habiendo entrado en él) devuelve false
                 return False
     return True
+
 def siguientePrimoFuerte(n):
 	number = n+3-(n%4)
 	while(not(PrimalidadMillerRabin(number,100)) or not(PrimalidadMillerRabin((number-1)//2,100))):
 		number+=4
 	return number
+    
 primoFuerte = siguientePrimoFuerte(24)
 print(primoFuerte)
 p = 19
