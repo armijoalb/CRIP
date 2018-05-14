@@ -36,7 +36,7 @@ def LFSR(polinomio=[1,0,0,1],semilla=[1,0,1,1],longitud=3):
 
     return salida
 
-print("Prueba algoritmo LFSR")
-print(LFSR(polinomio=[1,0,1,0],semilla=[1,0,0,1],longitud=17))
+#print("Prueba algoritmo LFSR")
+#print(LFSR(polinomio=[1,0,1,0],semilla=[1,0,0,1],longitud=17))
 
 
