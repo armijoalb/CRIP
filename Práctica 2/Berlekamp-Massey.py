@@ -55,4 +55,4 @@ def Berlekam_Massey(sequence):
                 
         
 l, F = Berlekam_Massey([1,0,1,1,1,1,0,0,0,1,0,0,1,1])
-print('Complejidad Lineal :', l,'Polinomio :' F)
+print('Complejidad Lineal : ', l,'Polinomio :', F)
