@@ -1,3 +1,9 @@
+"""
+Created on Thu May 10 16:23:56 2018
+
+@author: juanm
+"""
+
 from math import ceil, floor
 bits = [0, 0, 0, 1, 1, 1, 1, 0, 1, 0, 1, 1, 0, 0, 1]
 
