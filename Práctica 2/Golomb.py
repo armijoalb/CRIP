@@ -5,7 +5,7 @@ Created on Thu May 10 16:23:56 2018
 """
 
 from math import ceil, floor
-bits = [0, 0, 0, 1, 1, 1, 1, 0, 1, 0, 1, 1, 0, 0, 1]
+bits = [0, 0, 0, 0, 1, 1, 1, 0, 1, 0, 1, 1, 0, 0, 1]
 
 #PRIMER POSTULADO
 #En todo período, la diferencia entre el número de unos y el número de ceros debe ser a lo sumo uno.
