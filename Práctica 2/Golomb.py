@@ -40,6 +40,7 @@ def Segundo_pos(seq):
         
     # obtenemos todas las rachas posibles que existen en la secuencia
     runs = [list(g) for k, g in groupby(seq)]
+    
     # y contamos el número de rachas que hay para cada longitud
     count = Counter(map(lambda x: len(x), runs))
     # comprobamos si se cumple que #runs(k+1) == runs(k)
@@ -48,7 +49,7 @@ def Segundo_pos(seq):
             if not count[i] == 2*count[i+1]: # en el caso de que el siguiente elemento
                 return False                 # no sea 1/2 veces más pequeño
         else:
-            if not count[i] >= count[i+1] :
+            if count[i] != 1 or count[i+1] != 1: #en el caso que sean iguales y no sean 1 los dos
                 return False
     else:
         # si todo va bien, devolvemos True
@@ -64,19 +65,22 @@ from numpy import bitwise_xor, nonzero
 
 def rotate(seq, length):
     seq = [seq[-1]] + seq[:length-1]
+    return seq
 
 def Tercer_pos(seq):
     length, rotated_seq = len(seq), seq
-    rotate(rotated_seq, length)
+    rotated_seq = rotate(rotated_seq, length)
     # Calculamos la distancia hamming como un xor entre
     # ambas cadenas, y contamos los bits no nulos
     norm = len(bitwise_xor(seq, rotated_seq).nonzero()[0])
     for i in range(1, length):
-        rotate(rotated_seq, length)
-        if norm != len(bitwise_xor(seq, rotated_seq).nonzero()[0]):
+        new_rotated = rotated_seq
+        rotated_seq = rotate(rotated_seq, length)
+        if norm != len(bitwise_xor(new_rotated, rotated_seq).nonzero()[0]):
             return False
     else:
         return True
+
 
 Tercer_pos(bits)
 
