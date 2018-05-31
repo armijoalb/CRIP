@@ -23,7 +23,7 @@ def Primer_pos(seq):
         return ceil(n2_bits) == n_unos or floor(n2_bits) == n_unos
 
     
-Primer_pos(bits)
+#Primer_pos(bits)
 
 
 from itertools import groupby
@@ -43,6 +43,7 @@ def Segundo_pos(seq):
     
     # y contamos el número de rachas que hay para cada longitud
     count = Counter(map(lambda x: len(x), runs))
+    #print(count)
     # comprobamos si se cumple que #runs(k+1) == runs(k)
     for i in range(1, len(count)):
         if count[i] != count[i+1]:
@@ -55,7 +56,7 @@ def Segundo_pos(seq):
         # si todo va bien, devolvemos True
         return True
 
-Segundo_pos(bits)
+#print(Segundo_pos(bits))
 
 from numpy import bitwise_xor, nonzero
 
@@ -82,7 +83,7 @@ def Tercer_pos(seq):
         return True
 
 
-Tercer_pos(bits)
+#print(Tercer_pos(bits))
 
 
 def Golomb(seq):
@@ -92,4 +93,4 @@ def Golomb(seq):
         rules = [Primer_pos, Segundo_pos, Tercer_pos]
         return all(map(lambda x: rules[x](seq), range(3)))
     
-Golomb(bits)
+print(Golomb(bits))
