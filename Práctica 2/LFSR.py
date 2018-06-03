@@ -20,10 +20,26 @@ def multiply(polinomio=list(),salida=list(),modulo=2):
     lista = [polinomio[i]*salida[i] for i in range(0,len(polinomio))]
     return sum(lista) % 2
 
+def even_len(polinomio, semilla):
+    diff = len(polinomio) - len(semilla)
+    print(diff)
+    for i in range(diff):
+        semilla = calculate_next(polinomio, semilla)
+    
+    return semilla
+
+def calculate_next(polinomio, semilla):
+    suma = 0
+    for i in range(len(semilla)):
+        suma = (suma + polinomio[i]*semilla[i]) % 2
+    
+    semilla.append(suma)
+    return semilla
 
 def LFSR(polinomio=[1,0,0,1],semilla=[1,0,1,1],longitud=3):
-    if(len(polinomio) != len(semilla)):
-        return semilla
+    if(len(semilla) < len(polinomio)):
+        print("even lenght")
+        semilla = even_len(polinomio, semilla)
 
     inicio = len(semilla)
     grad = grado(polinomio)
@@ -36,7 +52,7 @@ def LFSR(polinomio=[1,0,0,1],semilla=[1,0,1,1],longitud=3):
 
     return salida
 
-#print("Prueba algoritmo LFSR")
-print(LFSR(polinomio=[1,0,0,1],semilla=[1,0,0,1],longitud=17))
+if __name__ == '__main__':
+    print(LFSR(polinomio=[1,0,0,1],semilla=[1,0,0,1],longitud=17))
 
 
