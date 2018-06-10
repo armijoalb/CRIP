@@ -40,7 +40,7 @@ def mraux(u,p,a):
     
 def MillerRabin(p,n):
     if (p%2) == 0:
-        print('El numero es par')
+        #print('El numero es par')
         return False
     [u,s] = factoriza2(p-1)
     i = 0
@@ -60,6 +60,7 @@ def siguienteprimo(m):
         m += 2
         primo = MillerRabin(m,50)
     return(m)
+    
 
 
 def siguienteprimofuerte(m):
@@ -149,4 +150,4 @@ def raizmodular(v,p,q):
         r2 = n-r2
     return([r1,r2])
     
-if __name__ == '__main__':
+
