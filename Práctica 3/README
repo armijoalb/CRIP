@@ -1,0 +1,10 @@
+Para poder ejecutar los ficheros se debe seguir los siguientes pasos:
+    - Instalar python 3 si no se tiene instalado.
+    - Hacer cd sobre la carpeta raíz de los ficheros.
+    - Ejecutar cada uno de los archivos como el comando python3 (nombre_archivo).py
+
+En esta carpeta se encuentran 3 archivos diferentes que deben ejecutarse en un orden concreto para que funcionen correctamente:
+    - Primero se debe ejecutar el fichero "DSSkeyGenerator.py" para generar las claves pública y privada.
+    - Después se debe firmar el fichero utilizando el archivo "DSSsign.py"
+    - Para validar la firma, se debe utilizar el archvivo "DSScheckSign.py"
+    

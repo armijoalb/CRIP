@@ -30,7 +30,7 @@ def generate_DSS_keys():
     # en Z_p 
     α = 1
     while α == 1:
-        g = randint(2, p - 1)
+        g = randint(2, p - 2)
         α = prot.potenciamodular(g, (p - 1) // q, p)
         
     # Seleccionamos el elemento x como 2 <= x <= q - 2
@@ -38,36 +38,10 @@ def generate_DSS_keys():
     x = randint(2, q - 2)
     y = prot.potenciamodular(α, x, p)
     # escribimos las claves publicas y la privada
-    with open("DSS_KEY.pub", 'w') as f:
+    with open("DSS_KEY.pub", 'w') as f: 
         f.write(str(p) + "\n" + str(q) + "\n" + str(α) + "\n" + str(y))
         
     with open("DSS_KEY", 'w') as f:
         f.write(str(x))
   
 generate_DSS_keys()
-
-'''
-q = prot.siguienteprimo(getrandbits(160))
-
-L = randint(512,1024)
-c = L - 160
-
-while c%2 != 0:
-    L = randint(512,1024)
-    c = L - 160
-
-p = (c*q) + 1
-
-while not prot.MillerRabin(p,50):
-    print(p)
-    c += 2
-    p = (c*q) + 1
-    
-g = randint(2,p-2)
-
-α = 1
-while α == 1:
-    g = randint(2, p - 2)
-    α = prot.potenciamodular(g, (p - 1) // q, p)
-'''
-

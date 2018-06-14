@@ -45,6 +45,6 @@ def DSS_check_sign(sign_file, document, public_key):
     # La firma es valida solo si r = r'
     return r2 == r
 
-DSS_check_sign("DSS_firma_DSStexto.txt", "DSStexto.txt", 
-               "DSS_KEY.pub")
+print(DSS_check_sign("DSS_firma_DSStexto.txt", "DSStexto.txt", 
+               "DSS_KEY.pub"))
 
